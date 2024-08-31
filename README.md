@@ -1,5 +1,5 @@
 # AntiSwitching
-The version attached to this repo works for Pocketmine 3 and Pocketmine 4
+The version attached to this repo works for Pocketmine 3 (betteraltay)
 
 # Pocketmine 5 Version
 For pocktetmine 5 all you have to do is change the plugin.yml and replace ```$event->setCancelled(true);``` with ```$ev->cancel();```
