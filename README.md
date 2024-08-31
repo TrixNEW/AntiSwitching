@@ -2,7 +2,7 @@
 The version attached to this repo works for Pocketmine 3 and Pocketmine 4
 
 # Pocketmine 5 Version
-For pocktetmine 5 all you have to do is replace ```$event->setCancelled(true);``` with ```$ev->cancel();```
+For pocktetmine 5 all you have to do is change the plugin.yml and replace ```$event->setCancelled(true);``` with ```$ev->cancel();```
 ![image](https://github.com/user-attachments/assets/31442da3-7855-44cb-bdf0-10737cba4c17)
 ![image](https://github.com/user-attachments/assets/fbb66a9a-112b-470b-9cd9-09be2e7c78b3)
 
