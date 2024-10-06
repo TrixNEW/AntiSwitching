@@ -1,10 +1,24 @@
 # AntiSwitching
-The version attached to this repo works for Pocketmine 3 (betteraltay)
+```<?php
+namespace trix;
 
-# Pocketmine 5 Version
-For pocktetmine 5 all you have to do is change the plugin.yml and replace ```$event->setCancelled(true);``` with ```$ev->cancel();```
-![image](https://github.com/user-attachments/assets/31442da3-7855-44cb-bdf0-10737cba4c17)
-![image](https://github.com/user-attachments/assets/fbb66a9a-112b-470b-9cd9-09be2e7c78b3)
+use pocketmine\event\entity\EntityDamageByEntityEvent;
+use pocketmine\event\entity\EntityDamageEvent;
+use pocketmine\event\Listener;
+
+class AntiSwitching implements Listener {
+    /**
+     * @param EntityDamageByEntityEvent $event
+     * @return void
+     * @priority HIGHEST
+     */
+    public function handleNoSwitch(EntityDamageByEntityEvent $event): void {
+        if ($event->getModifier(EntityDamageEvent::MODIFIER_PREVIOUS_DAMAGE_COOLDOWN) < 0) {
+            $ev->cancel();
+        }
+    }
+}
+```
 
 # Switcing
 Before:
